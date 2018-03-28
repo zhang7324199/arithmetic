@@ -9,9 +9,10 @@ public class Test {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		int[] num = {2,4,10,14,7,-9,3,2,8,-11};
-		quick_sort(num,0,num.length-1);
-		System.out.println(Arrays.toString(num));
+//		int[] num = {2,4,10,14,7,-9,3,2,8,-11};
+//		quick_sort(num,0,num.length-1);
+//		System.out.println(Arrays.toString(num));
+		System.out.println("master first commit");
 	}
 	
 	public static void quick_sort(int[] num, int p,int r){
