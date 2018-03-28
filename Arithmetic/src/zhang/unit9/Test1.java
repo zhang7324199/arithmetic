@@ -13,7 +13,7 @@ public class Test1 {
 		for(int i=1; i<=num.length; i++){
 			System.out.print(randomSelect(num,0,num.length-1,i)+" ");
 		}
-		System.out.println("asd");
+		System.out.println("ad");
 	}
 
 	//从一个数组中选择第k小的数
