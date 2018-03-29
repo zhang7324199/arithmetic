@@ -11,8 +11,8 @@ public class Test {
 	public static void main(String[] args) {
 		int[] A = {3,2,1,2,7,6,9};
 		countSort();
-//		radixSort();
-//		Linear_in_Place(A,10);
+		radixSort();
+		Linear_in_Place(A,10);
 	}
 	
 	
