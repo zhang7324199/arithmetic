@@ -14,7 +14,7 @@ public class Test1 {
 			System.out.print(randomSelect(num,0,num.length-1,i)+" ");
 		}
 		Math.abs(-11);
-		System.out.println("master NO.1");
+		System.out.println("master one");
 	}
 
 	//从一个数组中选择第k小的数
