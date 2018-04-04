@@ -15,7 +15,9 @@ public class Test1 {
 		}
 		Math.abs(-11);
 		System.out.println("lalala");
-		aqweqweasd
+		System.out.println("master hehe one");
+		Math.abs("a","b");
+		System.out.println("master asdwre");
 	}
 
 	//��һ��������ѡ���kС����
