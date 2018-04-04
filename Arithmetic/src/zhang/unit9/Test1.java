@@ -14,10 +14,11 @@ public class Test1 {
 			System.out.print(randomSelect(num,0,num.length-1,i)+" ");
 		}
 		Math.abs(-11);
-		System.out.println("master one");
+		System.out.println("lalala");
+		aqweqweasd
 	}
 
-	//´ÓÒ»¸öÊı×éÖĞÑ¡ÔñµÚkĞ¡µÄÊı
+	//ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½kĞ¡ï¿½ï¿½ï¿½ï¿½
 	public static int randomSelect(int[] num,int start, int end, int k){
 		if(start>=end){
 			return num[start];
