@@ -4,21 +4,14 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.Properties;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
-
 public class Test1 {
 
 	public static void main(String[] args) throws IOException {
-		int[] num = {5,2,3,11,-4,1};
-		int n = nishuduei(num,0,num.length-1);
-		System.out.println(n);
-		Properties p = new Properties();
-//		p.load(Test1.class.getClassLoader().getResourceAsStream("my.properties"));
-//		System.out.println(p.get("zhang"));
-		Log log = LogFactory.getLog(Test1.class);
-		log.info("asd");
+//		int[] num = {5,2,3,11,-4,1};
+//		int n = nishuduei(num,0,num.length-1);
+//		System.out.println(n);
 
+		insertSort();
 	}
 	
 	//≤Â»Î≈≈–Ú

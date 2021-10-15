@@ -13,11 +13,6 @@ public class Test1 {
 		for(int i=1; i<=num.length; i++){
 			System.out.print(randomSelect(num,0,num.length-1,i)+" ");
 		}
-		Math.abs(-11);
-		System.out.println("lalala");
-		System.out.println("master hehe one");
-		Math.abs("a","b");
-		System.out.println("master asdwre");
 	}
 
 	//��һ��������ѡ���kС����
