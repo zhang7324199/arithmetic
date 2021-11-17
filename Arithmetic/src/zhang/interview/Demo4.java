@@ -8,7 +8,75 @@ public class Demo4 {
 //        f1();
 //        removeInvalidParenthesesDFS();
 //        removeInvalidParenthesesBFS();
-        f2();
+//        f2();
+        TreeNode treeNode = reConstructBinaryTree();
+        zxubianli(treeNode);
+    }
+    public static boolean f = false;
+    public static void zxubianli(TreeNode treeNode){
+        if(treeNode==null) return;
+        zxubianli(treeNode.left);
+        if(f){
+            System.out.println(treeNode.val);
+            f = false;
+        }else{
+            if(treeNode.val==3){
+                f = true;
+            }else{
+                f = false;
+            }
+        }
+        zxubianli(treeNode.right);
+    }
+
+
+    public static class TreeNode {
+       int val;
+       TreeNode left;
+       TreeNode right;
+       TreeNode(int x) { val = x; }
+    }
+
+    /**
+     * 给定节点数为 n 二叉树的前序遍历和中序遍历结果，请重建出该二叉树并返回它的头结点。
+     * 例如输入前序遍历序列{1,2,4,7,3,5,6,8}和中序遍历序列{4,7,2,1,5,3,8,6}，则重建出如下图所示。
+     * @return
+     */
+    public static TreeNode reConstructBinaryTree() {
+        int [] pre = {1,2,4,7,3,5,6,8};
+        int [] vin = {4,7,2,1,5,3,8,6};
+
+        TreeNode treeNode = new TreeNode(pre[0]);
+        int genIndex = -1;
+        for(int i=0; i<vin.length; i++){
+            if(pre[0]==vin[i]){
+                genIndex = i;
+                break;
+            }
+        }
+        int pS = genIndex;//perStart+(genIndex-midStart)
+        dgui(1, pS, 0, genIndex-1, pre, vin, treeNode,true); //左边子树
+        dgui(pS+1, vin.length-1, genIndex+1, vin.length-1, pre, vin, treeNode,false); //右边子树
+        return treeNode;
+    }
+    private static void dgui(int perStart,int perEnd,int midStart,int midEnd,int [] pre,int [] vin, TreeNode treeNode, boolean isLeft){
+        if(perStart>perEnd || midStart>midEnd) return;
+        int genIndex = -1;
+        for(int i=midStart; i<=midEnd; i++){
+            if(pre[perStart]==vin[i]){
+                genIndex = i;
+                break;
+            }
+        }
+        TreeNode tn = new TreeNode(vin[genIndex]);
+        if(isLeft){
+            treeNode.left = tn;
+        }else{
+            treeNode.right = tn;
+        }
+        int pS = perStart+(genIndex-midStart);
+        dgui(perStart+1, pS, midStart, genIndex-1, pre, vin, tn,true); //左边子树
+        dgui(pS+1, perEnd, genIndex+1, midEnd, pre, vin, tn,false); //右边子树
     }
 
 
